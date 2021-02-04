@@ -7,7 +7,7 @@ local ngx = ngx
 handler.PRIORITY = 2000
 
 function handler:new()
-  handler.super.new(self, "getreal_ip")
+  handler.super.new(self, "get_real_ip")
 end
 
 function handler:getRealIp()
