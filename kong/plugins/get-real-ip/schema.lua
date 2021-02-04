@@ -1,3 +1,6 @@
-return {
-    no_consumer = true
+local schema = {
+    no_consumer = true,
+    fields = {}
 }
+
+return schema
