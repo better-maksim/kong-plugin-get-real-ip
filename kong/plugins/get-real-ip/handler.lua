@@ -2,9 +2,10 @@ local BasePlugin = require "kong.plugins.base_plugin"
 
 local GetRealIpHandler = BasePlugin:extend()
 
+local ngx = ngx
 local kong = kong
 
-local ngx = ngx
+
 
 GetRealIpHandler.PRIORITY = 1000
 
@@ -13,7 +14,7 @@ function GetRealIpHandler:new()
 end
 
 function GetRealIpHandler:getRealIp()
-    
+
     local headers=ngx.req.get_headers()
     local client_ip = headers["x-forwarded-for"]
 
@@ -33,13 +34,13 @@ function GetRealIpHandler:getRealIp()
         local pos  = string.find(client_ip, ",", 1)
         client_ip = string.sub(client_ip,1,pos-1)
     end
-
     return client_ip;
 end
 
 function GetRealIpHandler:access(conf)
 
   GetRealIpHandler.super.access(self)
+
   local response = {}
   local data = {};
   response["message"] = "success"
