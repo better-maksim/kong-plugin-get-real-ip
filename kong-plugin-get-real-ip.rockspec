@@ -2,7 +2,7 @@ package = "kong-plugin-get-real-ip"
 version = "0.1-1"
 supported_platforms = {"linux", "macosx"}
 source = {
-  url = "https://github.com/better-maksim/kong-plugin-get-real-ip"
+  url = "https://github.com/better-maksim/kong-plugin-get-real-ip",
   tag = "v0.1-1"
 }
 description = {
