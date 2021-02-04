@@ -1,4 +1,4 @@
-package = "kong-plugin-get-get-real-ip"
+package = "kong-plugin-get-real-ip"
 version = "0.1-1"
 supported_platforms = {"linux", "macosx"}
 source = {
