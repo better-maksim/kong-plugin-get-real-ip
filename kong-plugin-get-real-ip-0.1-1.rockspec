@@ -5,6 +5,7 @@ source = {
   url = "https://github.com/better-maksim/kong-plugin-get-real-ip",
   tag = "v0.1-1"
 }
+local pluginName = package:match("^kong%-plugin%-(.+)$")  -- "get-real-ip"
 description = {
   summary = "获取真实 IP",
   license = "Apache 2.0",
@@ -13,13 +14,19 @@ description = {
       获取真实 IP
   ]],
 }
+
 dependencies = {
   "lua ~> 5.1"
 }
+
 build = {
   type = "builtin",
   modules = {
-    ["kong.plugins.get-real-ip.handler"] = "kong/plugins/get-real-ip/handler.lua",
-    ["kong.plugins.get-real-ip.schema"] = "kong/plugins/get-real-ip/schema.lua"
+    ["kong.plugins."..pluginName..".handler"] = "kong/plugins/"..pluginName.."/handler.lua",
+    ["kong.plugins."..pluginName..".schema"] = "kong/plugins/"..pluginName.."/schema.lua",
   }
 }
+
+
+
+
