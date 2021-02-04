@@ -8,7 +8,7 @@ source = {
 description = {
   summary = "获取真实 IP",
   license = "Apache 2.0",
-  homepage = "https://github.com/better-maksim/kong-real-ip",
+  homepage = "https://github.com/better-maksim/kong-plugin-get-real-ip",
   detailed = [[
       获取真实 IP
   ]],
@@ -19,7 +19,7 @@ dependencies = {
 build = {
   type = "builtin",
   modules = {
-    ["kong.plugins.get_real_ip.handler"] = "src/handler.lua",
-    ["kong.plugins.get_real_ip.schema"] = "src/schema.lua"
+    ["kong.plugins.get-real-ip.handler"] = "src/handler.lua",
+    ["kong.plugins.get-real-ip.schema"] = "src/schema.lua"
   }
 }
