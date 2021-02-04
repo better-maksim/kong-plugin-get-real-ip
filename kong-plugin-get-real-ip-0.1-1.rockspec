@@ -19,7 +19,7 @@ dependencies = {
 build = {
   type = "builtin",
   modules = {
-    ["kong.plugins.get-real-ip.handler"] = "src/handler.lua",
-    ["kong.plugins.get-real-ip.schema"] = "src/schema.lua"
+    ["kong.plugins.get-real-ip.handler"] = "kong/plugins/get-real-ip/handler.lua",
+    ["kong.plugins.get-real-ip.schema"] = "kong/plugins/get-real-ip/schema.lua"
   }
 }
